@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+		<title>{%block title %}Django Sosyal Medya{% endblock %}</title>
+    <meta name="keywords" content="{%block keywords %}Anasayfa anahtar kelimeler{% endblock %}">
+    <meta name="descraption" content="{%block descraption %}Anasayfa kısa açıklama{% endblock %}">
+
+    {% load static %}
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="{% static  'css/style.css'%}">
+		<link href='http://fonts.googleapis.com/css?family=Economica:700' rel='stylesheet' type='text/css'>
+		<script src="{% static 'js/jquery.js'%}"></script>
+		<script src="{% static 'js/jquery-migrate-1.1.1.js'%}"></script>
+		<script src="{% static 'js/script.js'%}"></script>
+		<script src="{% static 'js/jquery.ui.totop.js'%}"></script>
+		<script src="{% static 'js/superfish.js'%}"></script>
+		<script src="{% static 'js/jquery.equalheights.js'%}"></script>
+		<script src="{% static 'js/jquery.mobilemenu.js'%}"></script>
+		<script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
+		<script>
+		$(document).ready(function(){
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		})
+		</script>
+		<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="{% static 'http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg'%}" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" media="screen" href="{% static  'css/ie.css'%}">
+		<![endif]-->
+    {%block head %}{% endblock %}
+</head>
+<body>
+    {%include 'header.html' %}
+
+    {%block content %} {%include 'content.html' %}{% endblock %}
+}
+ {%block footer %} {%include 'footer.html' %} {% endblock %}
+
+
+</body>
+</html>
