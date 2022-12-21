@@ -1,7 +1,11 @@
 {% extends "homebase.html" %}
-{%block title %}İndex sayfası{% endblock %}
+{% block title %}İndex sayfası{% endblock %}
 
-{%block keywords %}İndex sayfası anahtar kelimeler{% endblock %}
-{%block descraption %}İndex sayfası açıklama{% endblock %}
+{% block keywords %}İndex sayfası anahtar kelimeler{% endblock %}
+{% block descraption %}İndex sayfası açıklama{% endblock %}
 
 {% block content %} {% include "content.html" %} {% endblock %}
+
+{% include 'header.html' %}
+
+ {% block footer %} {%include 'footer.html' %} {% endblock %}
