@@ -10,18 +10,22 @@ class ProductImageInline(admin.TabularInline):
 
 class CategoryAdmin(admin.ModelAdmin):
 
-    list_display = ['title', 'status']
+    list_display = ['title', 'status', 'image_tag']
+    readonly_fields = ('image_tag',)
+
 
 class ProductAdmin(admin.ModelAdmin):
 
-    list_display = ['title', 'status','amount']
-    list_filter = ['status','category']
+    list_display = ['title', 'status', 'amount', 'image_tag']
+    readonly_fields = ('image_tag',)
+    list_filter = ['status', 'category']
     inlines = [ProductImageInline]
 
 class ImagesAdmin(admin.ModelAdmin):
+    readonly_fields = ('image_tag',)
+    list_display = ['title', 'product', 'image_tag']
 
-    list_display = ['title', 'product', 'image']
 
-admin.site.register(Category,CategoryAdmin)
-admin.site.register(Product,ProductAdmin)
-admin.site.register(Images,ImagesAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Images, ImagesAdmin)
