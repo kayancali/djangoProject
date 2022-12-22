@@ -1,0 +1,39 @@
+{% extends "homebase.html" %}
+{% block title %}{{ setting.title }} {% endblock %}
+
+{% block keywords %}{{ setting.keywords }}{% endblock %}
+{% block descraption %}{{ setting.description }}{% endblock %}
+
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+{% endblock %}
+
+{% block content %}
+
+<div class="menu_block">
+			<div class="container_12">
+				<div class="grid_12">
+					<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+						<ul class="sf-menu">
+							<li class=""><a href="/home">Ana Menü</a></li>
+							<li><a href="/hakkimizda">Hakkimizda</a></li>
+							<li><a href="/kisiler">Kişiler</a></li>
+							<li class="current"><a href="/profil">Profil</a></li>
+							<li><a href="/iletisim">İletişim</a></li>
+						</ul>
+					</nav>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+   <div class="section">
+       <div class="container_12">
+           <div class="row">
+                {{Product.product | safe }}
+           </div>
+       </div>
+</div>
+{% endblock %}

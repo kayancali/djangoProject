@@ -1,11 +1,15 @@
 {% extends "homebase.html" %}
-{% block title %}İndex sayfası{% endblock %}
+{% block title %}{{ setting.title }} {% endblock %}
 
-{% block keywords %}İndex sayfası anahtar kelimeler{% endblock %}
-{% block descraption %}İndex sayfası açıklama{% endblock %}
+{% block keywords %}{{ setting.keywords }}{% endblock %}
+{% block descraption %}{{ setting.description }}{% endblock %}
+
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+{% endblock %}
 
 {% block content %} {% include "content.html" %} {% endblock %}
 
 {% include 'header.html' %}
 
- {% block footer %} {%include 'footer.html' %} {% endblock %}
