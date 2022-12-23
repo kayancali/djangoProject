@@ -3,13 +3,33 @@
     {% load static %}
 				<div class="clear"></div>
 				<div class="container_12">
+
 					<div class="grid_12">
 						<h1>
-							<a href="index.html">
-								<img src= "{% static 'images/baslikLogo.png'%}" alt= "Your Happy Family" width="250" height="128">
+							<a href="/home">
+
+								<img src= "{% static 'images/baslikLogo.png'%}" alt= "" width="300" height="128">
+
+
 							</a>
+
 						</h1>
+                        <div class="myAccountNotLogin">
+                            {% if user.id is not None %}
+        <div class="myAccount" style="float: right; color:black" >
+            <h3><a href="#" rel="nofollow" title="HESABIM" class="menuTitle nobg">{{ user.first_name }}</a></h3>
+            <div class="loginStatus clearfix">
+            {% else %}
+                <h3><b><a href="/login/" class="text_uppercase" title="Üye Ol" style="float: right">Üye Ol</a></b></h3>
+             <h3><b><a href="/join" class="text_uppercase" title="Giriş Yap" style="float: right">Giriş Yap</a></b></h3>
+            {% endif %}
+            </div>
+
+        </div>
+    </div>
+
 					</div>
 				</div>
 			</header>
+
     </div>
