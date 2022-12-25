@@ -165,8 +165,8 @@ mark {
 
                     </div>
                     <div class="col-lg-6">
-                        <div class="about-avatar">
-                            <img src="" title="" alt="">
+                        <div class="fa-thumb-tack">
+                            <img src="{{profile.image.url}}" title="" alt="" width="300">
                         </div>
                     </div>
                 </div>
@@ -174,28 +174,29 @@ mark {
                     <div class="row">
                         <div class="col-6 col-lg-3">
                             <div class="count-data text-center">
-                                <h6 class="count h2" data-to="500" data-speed="500">500</h6>
-                                <p class="m-0px font-w-600">Happy Clients</p>
+                                <h4 class="count h2"> <p> İsim</p></h4>
+                                <p class="m-0px font-w-600">{{ user.first_name }}</p>
                             </div>
                         </div>
                         <div class="col-6 col-lg-3">
                             <div class="count-data text-center">
-                                <h6 class="count h2" data-to="150" data-speed="150">150</h6>
-                                <p class="m-0px font-w-600">Project Completed</p>
+                                <h4 class="count h2"> <p> Soy İsim</p></h4>
+                                <p class="m-0px font-w-600">{{ user.last_name }}</p>
                             </div>
                         </div>
                         <div class="col-6 col-lg-3">
                             <div class="count-data text-center">
-                                <h6 class="count h2" data-to="850" data-speed="850">850</h6>
-                                <p class="m-0px font-w-600">Photo Capture</p>
+                                <h4 class="count h2"> <p> Email</p></h4>
+                                <p class="m-0px font-w-600">{{ user.email }}</p>
                             </div>
                         </div>
-                        <div class="col-6 col-lg-3">
+                            <div class="col-6 col-lg-3">
                             <div class="count-data text-center">
-                                <h6 class="count h2" data-to="190" data-speed="190">190</h6>
-                                <p class="m-0px font-w-600">Telephonic Talk</p>
+                                <h4> <a  href="/galeri" rel="nofollow" title="kişi profiline git" class="menuTitle nobg"class="count h2" class="count h2"> Fotograflarım </a></h4>
+                                <p class="m-0px font-w-600">{{ galeri }}</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

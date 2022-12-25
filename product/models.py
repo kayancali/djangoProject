@@ -40,7 +40,7 @@ class Product(models.Model):
     image = models.ImageField(blank=True, upload_to='images/')
     price = models.FloatField()
     amount = models.IntegerField()
-    detail = RichTextUploadingField()
+
     status = models.CharField(max_length=10, choices=STATUS)
     create_at = models.DateTimeField(auto_created=True)
     update_at = models.DateTimeField(auto_created=True)

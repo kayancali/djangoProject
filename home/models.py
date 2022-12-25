@@ -1,5 +1,8 @@
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.contrib.auth.models import User
 from django.db import models
+from django.forms import ModelForm
+
 
 # Create your models here.
 class Setting(models.Model):
@@ -30,6 +33,20 @@ class Setting(models.Model):
     update_at = models.DateTimeField(auto_created=True)
     def __str__(self):
         return self.title
+
+
+
+class UserProfile(models.Model):
+
+
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    image = models.ImageField(blank=True, upload_to='images/users/')
+    name = models.CharField(blank=True, max_length=20)
+    def __str__(self):
+        return self.user.username
+
+
+
 
 
 

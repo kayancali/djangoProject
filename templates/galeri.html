@@ -1,0 +1,89 @@
+{% extends "homebase.html" %}
+{% block title %}{{ setting.title }} {% endblock %}
+
+{% block keywords %}{{ setting.keywords }}{% endblock %}
+{% block descraption %}{{ setting.description }}{% endblock %}
+
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+{% endblock %}
+
+{% block content %}
+
+    <style>
+    .profile-header {
+    transform: translateY(5rem);
+}
+
+
+body {
+    background:#cafcff;
+
+}
+    </style>
+    <div class="menu_block">
+			<div class="container_12">
+				<div class="grid_12">
+					<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+						<ul class="sf-menu">
+							<li class=""><a href="/home">Ana Menü</a></li>
+							<li ><a href="/hakkimizda">Hakkimizda</a></li>
+							<li><a href="/kisiler">Kişiler</a></li>
+							<li class="current" ><a href="/profil">Profil</a></li>
+							<li><a href="/iletisim">İletişim</a></li>
+						</ul>
+					</nav>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+   <div class="section">
+       <div class="container_12"style="">
+           <div class="row">
+
+
+
+<div class="row py-5 px-4">
+    <div class="col-xl-4 col-md-6 col-sm-10 mx-auto">
+
+        <!-- Profile widget -->
+
+        <div class="bg-white shadow rounded overflow-hidden">
+
+<h3><p style="position:absolute" class="m-0px font-w-600">{{ user.first_name }}</p></h3>
+        <h3><a style="float: left" href=" " rel="nofollow" title="HESABIM" class="menuTitle nobg">Fotograf Paylaş</a></h3>
+<br>
+            <div class="main">
+                <div class="box bx1">
+                    <div class="inner">
+                        <h3>Gallery</h3>
+
+
+<div class="row text-center text-lg-start">
+
+         {% for i in images %}
+
+                    <div  style="display: block;margin-right: auto;margin-right: auto"><img width="300" src=" {{ i.image.url }} "></div>
+
+                                    {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+                </div>
+        </div><!-- End profile widget -->
+
+    </div>
+</div>
+
+
+           </div>
+       </div>
+</div>
+{% endblock %}
